@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <!-- daisy uI cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main>
+      <!-- curren balance  and logout button related nav section-->
+      <section class="w-[490px] shadow-2xl rounded-3xl m-auto py-6 px-2">
+        <!-- section  nav container -->
+        <div class="flex justify-between items-center">
+          <!-- stat container -->
+          <div>
+            <div class="stats shadow">
+              <div class="stat">
+                <div id="current-bln" class="stat-value">9400</div>
+                <div class="stat-desc">Available Balance</div>
+              </div>
+            </div>
+          </div>
+          <!-- logout container -->
+          <div>
+            <button class="btn btn-lg">Log Out</button>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <!-- welcome text container  -->
+        <div>
+          <h3 class="welcome-title text-2xl">🔥 Welcome to Payooo!</h3>
+          <p class="welcome-desc ml-2">
+            Enjoy easy and convenient financial services with us. Cash out
+            charge is low and
+          </p>
+        </div>
+        <!-- all button container -->
+        <div class="grid grid-cols-3 gap-3 mt-5">
+          <button class="btn btn-lg">Add Money</button>
+          <button class="btn btn-lg">CasOut</button>
+          <button class="btn btn-lg">Transfer Money</button>
+          <button class="btn btn-lg">Get Bonus</button>
+          <button class="btn btn-lg">Pay Bill</button>
+          <button class="btn btn-lg">Transactions</button>
+        </div>
+        <!-- input add  container start-->
+        <div>
+          <h3 class="add-money-title ml-14 mt-4">Add Money</h3>
+          <div
+            class="card bg-base-100 w-full m-auto max-w-sm shrink-0 shadow-2xl"
+          >
+            <form class="space-y-3 ml-2 p-5">
+              <label for="select">Select A Bank</label>
+              <select
+                id="select-input"
+                class="select select-bordered w-full max-w-xs"
+              >
+                <option disabled selected>Select back</option>
+                <option>Asa</option>
+                <option>Brac</option>
+              </select>
+              <label for="select">Bank Account Number</label>
+              <input
+                id="Bank-number"
+                type="text"
+                placeholder="Enter 11 digit account number"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <label for="select">Amount to Add</label>
+              <input
+                id="add-amount"
+                type="text"
+                placeholder="Add Amount to withdraw"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <label for="select">Pin Number</label>
+              <input
+                id="add-pin-number"
+                type="password"
+                placeholder="Enter 4 digit pin number"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <button id="add-money-btn" class="btn btn-primary w-full">
+                Add Money
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- input add  container end-->
+      </section>
+    </main>
+    <script src="./js/shared.js"></script>
+    <script src="./js/add_money.js"></script>
+  </body>
+</html>

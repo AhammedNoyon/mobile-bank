@@ -13,6 +13,46 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <header class="w-2/6 mx-auto shadow-lg flex h-full mt-28 items-cente">
+      <div
+        class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl rounded-lg"
+      >
+        <form class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Mobile Number</span>
+            </label>
+            <input
+              id="Mobile-number"
+              type="text"
+              placeholder="Enter your number"
+              class="input input-bordered rounded-full"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">4 Digit Pin</span>
+            </label>
+            <input
+              id="input-pin"
+              type="password"
+              placeholder="Enter 4 Digit Pin"
+              class="input input-bordered rounded-full"
+              required
+            />
+          </div>
+          <div class="form-control mt-6">
+            <button id="login-btn" class="btn btn-primary rounded-full">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+    <script src="./js/shared.js"></script>
     <script src="./js/login.js"></script>
   </body>
 </html>
