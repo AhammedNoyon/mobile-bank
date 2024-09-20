@@ -29,7 +29,7 @@
           </div>
           <!-- logout container -->
           <div>
-            <button class="btn btn-lg">Log Out</button>
+            <button id="main-log-out-btn" class="btn btn-lg">Log Out</button>
           </div>
         </div>
         <div class="divider"></div>
@@ -43,15 +43,19 @@
         </div>
         <!-- all button container -->
         <div class="grid grid-cols-3 gap-3 mt-5">
-          <button class="btn btn-lg">Add Money</button>
-          <button class="btn btn-lg">CasOut</button>
-          <button class="btn btn-lg">Transfer Money</button>
-          <button class="btn btn-lg">Get Bonus</button>
-          <button class="btn btn-lg">Pay Bill</button>
-          <button class="btn btn-lg">Transactions</button>
+          <button id="main-add-money-btn" class="btn btn-lg">Add Money</button>
+          <button id="main-cash-out-btn" class="btn btn-lg">CasOut</button>
+          <button id="main-transfer-btn" class="btn btn-lg">
+            Transfer Money
+          </button>
+          <button id="main-bonus-btn" class="btn btn-lg">Get Bonus</button>
+          <button id="main-pay-bill-btn" class="btn btn-lg">Pay Bill</button>
+          <button id="main-transaction-btn" class="btn btn-lg">
+            Transactions
+          </button>
         </div>
         <!-- add money container start-->
-        <div class="hidden">
+        <div id="add-money-container">
           <h3 class="add-money-title ml-14 mt-4">Add Money</h3>
           <div
             class="card bg-base-100 w-full m-auto max-w-sm shrink-0 shadow-2xl"
@@ -95,7 +99,7 @@
         </div>
         <!--  add money container end-->
         <!-- cashOut money container start -->
-        <div class="hidden">
+        <div id="cash-out-container" class="hidden">
           <h3 class="add-money-title ml-14 mt-4">Cash Out</h3>
           <div
             class="card bg-base-100 w-full m-auto max-w-sm shrink-0 shadow-2xl"
@@ -130,7 +134,7 @@
         </div>
         <!-- cashOut money container end -->
         <!-- Transfer money container start  -->
-        <div class="hidden">
+        <div id="transfer-money-container" class="hidden">
           <h3 class="add-money-title ml-14 mt-4">Transfer Money</h3>
           <div
             class="card bg-base-100 w-full m-auto max-w-sm shrink-0 shadow-2xl"
@@ -165,7 +169,7 @@
         </div>
         <!-- Transfer money container end  -->
         <!-- get bonus container start -->
-        <div>
+        <div id="get-bonus-container" class="hidden">
           <h3 class="add-money-title ml-14 mt-4">Get Bonus</h3>
           <div
             class="card bg-base-100 w-full m-auto max-w-sm shrink-0 shadow-2xl"
@@ -185,6 +189,55 @@
           </div>
         </div>
         <!-- get bonus container end -->
+        <!-- pay bil container start -->
+        <div id="bill-payment-container" class="hidden">
+          <h3 class="add-money-title ml-14 mt-4">Pay Bill</h3>
+          <div
+            class="card bg-base-100 w-full m-auto max-w-sm shrink-0 shadow-2xl"
+          >
+            <form class="space-y-3 ml-2 p-5">
+              <label for="select">Select To Pay</label>
+              <select
+                id="select-input-pay-bil"
+                class="select select-bordered w-full max-w-xs"
+              >
+                <option disabled selected>Select back</option>
+                <option>Agent</option>
+                <option>personal</option>
+              </select>
+              <label for="select">Biller Account Number</label>
+              <input
+                id="bill-account-number"
+                type="text"
+                placeholder="Enter account number"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <label for="select">Amount to pay</label>
+              <input
+                id="pay-amount"
+                type="text"
+                placeholder="Add Amount to pay"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <label for="select">Pin Number</label>
+              <input
+                id="pay-pin-number"
+                type="password"
+                placeholder="Enter 4 digit pin number"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <button id="pay-money-btn" class="btn btn-primary w-full">
+                Pay Now
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- pay bil container end -->
+        <!-- Transactions container start  -->
+        <div id="transactions-container" class="hidden">
+          <!-- <h1>I am Transactions heading</h1> -->
+        </div>
+        <!-- Transactions container end  -->
       </section>
     </main>
     <script src="./js/shared.js"></script>
@@ -192,5 +245,8 @@
     <script src="./js/out_money.js"></script>
     <script src="./js/transfer_money.js"></script>
     <script src="./js/coupon.js"></script>
+    <script src="./js/pay_bill.js"></script>
+    <script src="./js/feature.js"></script>
+    <script src="./js/log_out.js"></script>
   </body>
 </html>

@@ -3,14 +3,14 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
     const pinNumber = getInputValueById("input-pin");
-    const phoneNumber = getInputValueById("Mobile-number");
+    const phoneNumber = onlyInputValueById("Mobile-number");
     // how to do it
 
     // if (typeof phoneNumber !== "number" || typeof pinNumber !== "number") {
     //   alert("Invalid Input");
     // }
 
-    if (phoneNumber === 01888 && pinNumber === 555) {
+    if (phoneNumber === "01888" && pinNumber === 555) {
       location.href = "/home.html";
     } else {
       alert("Wrong Input");
