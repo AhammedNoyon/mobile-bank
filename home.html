@@ -14,7 +14,7 @@
   </head>
   <body>
     <main>
-      <!-- curren balance  and logout button related nav section-->
+      <!-- curren balance  and logout button related nav and home section-->
       <section class="w-[490px] shadow-2xl rounded-3xl m-auto py-6 px-2">
         <!-- section  nav container -->
         <div class="flex justify-between items-center">
@@ -50,8 +50,8 @@
           <button class="btn btn-lg">Pay Bill</button>
           <button class="btn btn-lg">Transactions</button>
         </div>
-        <!-- input add  container start-->
-        <div>
+        <!-- add money container start-->
+        <div class="hidden">
           <h3 class="add-money-title ml-14 mt-4">Add Money</h3>
           <div
             class="card bg-base-100 w-full m-auto max-w-sm shrink-0 shadow-2xl"
@@ -93,10 +93,104 @@
             </form>
           </div>
         </div>
-        <!-- input add  container end-->
+        <!--  add money container end-->
+        <!-- cashOut money container start -->
+        <div class="hidden">
+          <h3 class="add-money-title ml-14 mt-4">Cash Out</h3>
+          <div
+            class="card bg-base-100 w-full m-auto max-w-sm shrink-0 shadow-2xl"
+          >
+            <form class="space-y-3 ml-2 p-5">
+              <label for="select">Agent Number</label>
+              <input
+                id="agent-number"
+                type="text"
+                placeholder="Enter 11 digit number"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <label for="select">Amount</label>
+              <input
+                id="cashOut-amount"
+                type="text"
+                placeholder="Enter amount to withdraw"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <label for="select">Pin Number</label>
+              <input
+                id="cashOut-pin"
+                type="password"
+                placeholder="Enter 4 digit pin number"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <button id="cashOut-btn" class="btn btn-primary w-full">
+                Withdraw Money
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- cashOut money container end -->
+        <!-- Transfer money container start  -->
+        <div class="hidden">
+          <h3 class="add-money-title ml-14 mt-4">Transfer Money</h3>
+          <div
+            class="card bg-base-100 w-full m-auto max-w-sm shrink-0 shadow-2xl"
+          >
+            <form class="space-y-3 ml-2 p-5">
+              <label for="select">User Account Number</label>
+              <input
+                id="user-acc-number"
+                type="text"
+                placeholder="Enter 11 digit number"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <label for="select">Amount</label>
+              <input
+                id="Transfer-amount"
+                type="text"
+                placeholder="Enter amount to transfer"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <label for="select">Pin Number</label>
+              <input
+                id="transfer-pin"
+                type="password"
+                placeholder="Enter 4 digit pin number"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <button id="transfer-btn" class="btn btn-primary w-full">
+                Send Now
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- Transfer money container end  -->
+        <!-- get bonus container start -->
+        <div>
+          <h3 class="add-money-title ml-14 mt-4">Get Bonus</h3>
+          <div
+            class="card bg-base-100 w-full m-auto max-w-sm shrink-0 shadow-2xl"
+          >
+            <form class="space-y-3 ml-2 p-5">
+              <label for="select">Enter Bonus Coupon</label>
+              <input
+                id="coupon-pin"
+                type="password"
+                placeholder="Enter your coupon"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <button id="coupon-btn" class="btn btn-primary w-full">
+                Get Bonus
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- get bonus container end -->
       </section>
     </main>
     <script src="./js/shared.js"></script>
     <script src="./js/add_money.js"></script>
+    <script src="./js/out_money.js"></script>
+    <script src="./js/transfer_money.js"></script>
+    <script src="./js/coupon.js"></script>
   </body>
 </html>
